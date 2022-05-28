@@ -1,0 +1,63 @@
+@function pale($r, $g, $b) {
+  @return rgba($r, $g, $b, 0.05);
+}
+
+.category {
+  &_restorant {
+    background-color: pale(42, 215, 215);
+  }
+  &_sport {
+    background-color: pale(105, 163, 251);
+  }
+  &_beauty {
+    background-color: pale(224, 68, 190);
+  }
+  &_health {
+    background-color: pale(255, 80, 111);
+  }
+  &_interior {
+    background-color: pale(249, 198, 67);
+  }
+  &_electricity {
+    background-color: pale(115, 129, 253);
+  }
+  &_childrens {
+    background-color: pale(88, 147, 242);
+  }
+  &_travelling {
+    background-color: pale(30, 204, 120);
+  }
+  &_clothes {
+    background-color: pale(250, 192, 115);
+  }
+  &_zoo {
+    background-color: pale(46, 201, 173);
+  }
+  &_transport {
+    background-color: pale(251, 105, 114);
+  }
+  &_business {
+    background-color: pale(92, 157, 255);
+  }
+  &_18 {
+    background-color: pale(255, 58, 85);
+  }
+  &_hobbie {
+    background-color: pale(86, 210, 210);
+  }
+  &_online {
+    background-color: pale(158, 217, 84);
+  }
+  &_entertainment {
+    background-color: pale(175, 97, 236);
+  }
+  &_jewerly {
+    background-color: pale(243, 208, 25);
+  }
+  &_books {
+    background-color: pale(225, 68, 162);
+  }
+  &_other {
+    background-color: pale(39, 41, 49);
+  }
+}

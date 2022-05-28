@@ -1,0 +1,98 @@
+@import './variables.scss';
+
+@mixin modal {
+  background: #fff;
+  border-radius: 30px;
+}
+
+.new_offer_modal {
+  @include modal;
+  height: 500px;
+}
+
+.header {
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: $baseBlack;
+}
+
+.category_modal {
+  @include modal;
+  overflow-y: auto !important;
+  padding-bottom: 30px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.absolute-button-block,
+.relative-button-block {
+  width: 100%;
+  @include center-flex;
+}
+.absolute-button-block {
+  position: absolute;
+  bottom: 25px;
+}
+.relative-button-block {
+  margin-top: 45px;
+}
+
+.socials_modal {
+  background: #fff;
+  border-radius: 30px;
+  overflow-y: auto !important;
+  padding-bottom: 30px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.geo_modal {
+  @include modal;
+  height: auto !important;
+  padding: 35px 30px 30px 30px;
+  top: 31px !important;
+}
+
+@mixin close {
+  background-color: $secondGray;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border: none;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  &:hover {
+    background-color: darken($color: $secondGray, $amount: 30);
+  }
+}
+
+.carousel-wrapper {
+  height: 300px;
+  width: 100%;
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.task_modal {
+  @include modal;
+  padding-bottom: 40px;
+}

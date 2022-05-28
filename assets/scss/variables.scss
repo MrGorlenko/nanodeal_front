@@ -1,0 +1,178 @@
+$baseBg: #faf5f2;
+$baseOrange: #fe8862;
+$baseBlack: #2d3134;
+$baseGray: #6e7b97;
+$baseGreen: #34ca55;
+$baseRed: #f93c47;
+$basePink: #fc5a8b;
+$baseBlue: #2c98f0;
+$baseAqua: #69dfd8;
+$disabledOrange: #fbd4c7;
+$secondGreen: #00c667;
+$secondGray: #f6f7f9;
+$secondBlue: #79b7f0;
+$orderGray: #eaecf1;
+$stepGray: #abb4cd;
+$rightWidth: 356px;
+
+$smallDesktop: 1150px;
+$mobile: 768px;
+
+@mixin button-send {
+  border-radius: 13px;
+  color: $baseOrange;
+  background: rgba($color: $baseOrange, $alpha: 0.06);
+}
+
+@mixin button-gray {
+  background: none;
+  color: $baseGray;
+}
+
+@mixin button-green {
+  background: rgba($secondGreen, 0.06);
+  border-radius: 10px;
+  color: $secondGreen;
+}
+
+@mixin button-green-filled {
+  background: $secondGreen;
+  color: #fff;
+  font-weight: 600;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+@mixin auth-input {
+  border-radius: 13px;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: $baseGray;
+  border: none;
+}
+
+@mixin button-next {
+  border-radius: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+@mixin button-next-outline {
+  @include button-next;
+  color: $baseOrange;
+  border: 1.5px solid $baseOrange;
+  transition: ease 0.2s;
+  background: none;
+  &:hover {
+    background: $baseOrange;
+    color: #fff;
+  }
+}
+
+@mixin button-disabled-outline {
+  @include button-next;
+  background: none;
+  color: rgba($color: $baseOrange, $alpha: 0.6);
+  border: 1.5px solid rgba($color: $baseOrange, $alpha: 0.6);
+}
+
+@mixin button-edit-outline {
+  @include button-next;
+  background: none;
+  color: $baseGray;
+  border: 1.5px solid $baseGray;
+  transition: ease 0.2s;
+  &:hover {
+    background: $baseGray;
+    color: #fff;
+  }
+}
+
+@mixin button-pink-outline {
+  @include button-next;
+  background: none;
+  color: $basePink;
+  border: 1.5px solid $basePink;
+  transition: ease 0.2s;
+  &:hover {
+    background: $basePink;
+    color: #fff;
+  }
+}
+
+@mixin button-edit {
+  @include button-next;
+  background: none;
+  color: $baseGray;
+  border: none;
+  transition: ease 0.2s;
+  background-color: $orderGray;
+  &:hover {
+    background: $baseGray;
+    color: #fff;
+  }
+}
+
+@mixin button-next-active {
+  @include button-next;
+  background-color: $baseOrange;
+  transition: background-color ease 0.7s;
+  &:hover {
+    background-color: darken($color: $baseOrange, $amount: 10);
+  }
+}
+
+@mixin button-next-disabled {
+  @include button-next;
+  background: $disabledOrange;
+}
+
+@mixin button-save {
+  @include button-next;
+  background: $orderGray;
+  color: $baseGray;
+}
+
+@mixin button-delete {
+  @include button-next;
+  background: $baseBg;
+  color: $baseRed;
+}
+
+@mixin auth {
+  background: $baseBg;
+  padding: 91px 0 81px 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  @media screen and (max-width: 992px) {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@mixin header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  @media screen and (max-width: 922px) {
+    text-align: center;
+  }
+}
+
+@mixin avatar {
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

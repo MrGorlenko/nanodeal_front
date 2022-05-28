@@ -1,0 +1,115 @@
+@import './variables.scss';
+
+.vdpr-datepicker__calendar {
+  span,
+  p,
+  td {
+    color: $baseBlack;
+    font-weight: bold !important;
+  }
+}
+
+.vdpr-datepicker__calendar-actions {
+  display: none;
+}
+
+.vdpr-datepicker__calendar-table {
+  border-collapse: collapse;
+}
+
+.vdpr-datepicker__calendar-dialog--inline {
+  background: #ffffff;
+  border: none !important;
+  padding-bottom: 40px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.vdpr-datepicker__calendar-table td {
+  background-color: #fff !important;
+  line-height: 30px;
+  padding: 0;
+}
+
+.vdpr-datepicker__calendar-table .disabled {
+  background-color: $baseOrange !important;
+}
+
+.vdpr-datepicker__calendar-table tr .highlighted {
+  background-color: rgba($color: $baseOrange, $alpha: 0.3) !important;
+
+  &:first-of-type {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  &:hover {
+    background-color: $baseOrange !important;
+  }
+}
+
+.vdpr-datepicker__calendar-table tr {
+  border: 0.5px solid black;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  position: relative;
+}
+
+.vdpr-datepicker__calendar-control-prev,
+.vdpr-datepicker__calendar-control-next {
+  border-radius: 10px !important;
+  border: 1px solid $baseOrange !important;
+  color: $baseOrange !important;
+  width: 36px !important;
+  height: 36px !important;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.vdpr-datepicker__calendar-control-prev {
+  &::before {
+    content: '' !important;
+    background-image: url('~/static/images/icons/arrow.svg');
+    width: 31px;
+    height: 31px;
+    top: 31% !important;
+    left: 36% !important;
+    background-repeat: no-repeat;
+    transform: none !important;
+  }
+}
+
+.vdpr-datepicker__calendar-control-disabled.vdpr-datepicker__calendar-control-next {
+  &::before {
+    background-image: url('~/static/images/icons/arrow_white.svg');
+    transform: none !important;
+  }
+}
+
+.vdpr-datepicker__calendar-control-next {
+  &::before {
+    content: '' !important;
+    background-image: url('~/static/images/icons/arrow.svg');
+    transform: translate(-70%, -60%) rotate(-180deg) !important;
+    width: 31px;
+    height: 31px;
+    top: 31% !important;
+    left: 36% !important;
+    background-repeat: no-repeat;
+  }
+}
+
+.vdpr-datepicker__calendar-table th {
+  color: $baseGray !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.vdpr-datepicker__calendar-control-disabled {
+  background-color: rgba($color: $baseOrange, $alpha: 0.8) !important;
+  color: #fff !important;
+}
