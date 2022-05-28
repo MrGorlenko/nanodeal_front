@@ -89,7 +89,7 @@ export default {
     connectSocket() {
       this.new_messages = []
       this.socket = new WebSocket(
-        `ws://31.172.64.228:8000/ws/business_chat/${this.initialChatUID}/?Authorization=Bearer ${this.accessToken}`
+        `ws://13.53.66.70:8000/ws/business_chat/${this.initialChatUID}/?Authorization=Bearer ${this.accessToken}`
       )
       const self = this
       this.socket.onmessage = async function (event) {

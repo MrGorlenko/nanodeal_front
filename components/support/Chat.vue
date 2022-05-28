@@ -59,7 +59,7 @@ export default {
       })
 
     this.socket = new WebSocket(
-      `ws://31.172.64.228:8000/ws/business_chat/5327c703-6bb9-4499-a2bf-50d63b12c27a/?Authorization=Bearer ${this.accessToken}`
+      `ws://13.53.66.70:8000/ws/business_chat/5327c703-6bb9-4499-a2bf-50d63b12c27a/?Authorization=Bearer ${this.accessToken}`
     )
   },
 

@@ -239,7 +239,7 @@ export default {
   mounted() {
     // CATEGORIES
     this.$axios
-      .get('http://31.172.64.228:8000/api/v1/statistic/clients_categories/', {
+      .get('/api/v1/statistic/clients_categories/', {
         headers: {
           Authorization: `Bearer ${this.accessToken}`,
         },
